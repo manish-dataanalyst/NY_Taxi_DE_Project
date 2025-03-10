@@ -25,7 +25,16 @@
 								"secureOutput": false,
 								"secureInput": false
 							},
-							"userProperties": [],
+							"userProperties": [
+								{
+									"name": "Source",
+									"value": "trip-data/green_tripdata_2023-0@{item()}.parquet"
+								},
+								{
+									"name": "Destination",
+									"value": "manishfiles/texi/"
+								}
+							],
 							"typeProperties": {
 								"source": {
 									"type": "ParquetSource",
@@ -41,7 +50,7 @@
 									"type": "ParquetSink",
 									"storeSettings": {
 										"type": "AzureBlobFSWriteSettings",
-										"copyBehavior": "FlattenHierarchy"
+										"copyBehavior": "PreserveHierarchy"
 									},
 									"formatSettings": {
 										"type": "ParquetWriteSettings"
