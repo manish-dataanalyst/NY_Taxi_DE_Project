@@ -1,0 +1,20 @@
+{
+	"name": "ds_adls_greatethan9",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_adls_connect",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "taxi_data/trip_data",
+				"fileSystem": "bronze"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}

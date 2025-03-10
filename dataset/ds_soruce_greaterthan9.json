@@ -1,0 +1,27 @@
+{
+	"name": "ds_soruce_greaterthan9",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_taxi_trip02",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"month02": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "HttpServerLocation",
+				"relativeUrl": {
+					"value": "trip-data/green_tripdata_2023-@{dataset().month02}.parquet",
+					"type": "Expression"
+				}
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}

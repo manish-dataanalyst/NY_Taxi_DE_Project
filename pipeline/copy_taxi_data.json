@@ -26,7 +26,7 @@
 								},
 								"ifFalseActivities": [
 									{
-										"name": "Copy_from_source_copy1",
+										"name": "Copy_from_source_lessthan9",
 										"type": "Copy",
 										"dependsOn": [],
 										"policy": {
@@ -90,7 +90,7 @@
 								],
 								"ifTrueActivities": [
 									{
-										"name": "Copy_from_source",
+										"name": "Copy_graterthank9",
 										"type": "Copy",
 										"dependsOn": [],
 										"policy": {
@@ -134,10 +134,10 @@
 										},
 										"inputs": [
 											{
-												"referenceName": "ds_taxi_data",
+												"referenceName": "ds_soruce_greaterthan9",
 												"type": "DatasetReference",
 												"parameters": {
-													"month": {
+													"month02": {
 														"value": "@item()",
 														"type": "Expression"
 													}
@@ -146,7 +146,7 @@
 										],
 										"outputs": [
 											{
-												"referenceName": "Parquet1",
+												"referenceName": "ds_adls_greatethan9",
 												"type": "DatasetReference"
 											}
 										]
