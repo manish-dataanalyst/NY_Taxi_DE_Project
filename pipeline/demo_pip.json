@@ -62,8 +62,12 @@
 									"referenceName": "ds_demo_src",
 									"type": "DatasetReference",
 									"parameters": {
-										"file_name": {
+										"month": {
 											"value": "@item()",
+											"type": "Expression"
+										},
+										"file_name": {
+											"value": "@pipeline().parameters.file_name",
 											"type": "Expression"
 										}
 									}
@@ -75,7 +79,7 @@
 									"type": "DatasetReference",
 									"parameters": {
 										"file_name": {
-											"value": "@item()",
+											"value": "@pipeline().parameters.file_name",
 											"type": "Expression"
 										}
 									}
@@ -86,12 +90,9 @@
 				}
 			}
 		],
-		"variables": {
-			"@demo_pip().parameters.file_name": {
-				"type": "String"
-			},
-			"pp": {
-				"type": "String"
+		"parameters": {
+			"file_name": {
+				"type": "string"
 			}
 		},
 		"annotations": []

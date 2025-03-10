@@ -6,6 +6,9 @@
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
+			"month": {
+				"type": "string"
+			},
 			"file_name": {
 				"type": "string"
 			}
@@ -16,7 +19,7 @@
 			"location": {
 				"type": "HttpServerLocation",
 				"relativeUrl": {
-					"value": "trip-data/@{dataset().file_name}",
+					"value": "trip-data/green_tripdata_2023-0@{dataset().month}.parquet",
 					"type": "Expression"
 				}
 			},
